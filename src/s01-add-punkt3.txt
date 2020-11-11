@@ -2,4 +2,4 @@ terminate called after throwing an instance of 'std::out_of_range'
   what():  stoi
 Aborted (core dumped)
 
-WNiosek: Każda zmienna ma ograniczoną ilość pamięci, przez co po przekroczeniu jej granicy wyskakuje błąd i program nie jest w stanie tego obsłużyć.
+Wniosek: std::stoi() orientuje się,że mój napis nie jest możliwy do skonwertowania do typu liczbowego o szerokości 32 bitów ze znakiem.

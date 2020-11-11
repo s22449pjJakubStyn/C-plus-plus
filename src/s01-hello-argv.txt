@@ -4,6 +4,7 @@ Aborted (core dumped)
 
 Moje wnioski:
 
-Wywołany błąd jest spowodowany brakiem podania zmiennej/argumentu. Błąd wywołuje "std::logic_error" (ogólny błąd logiczny) oraz "M_construct null not valid".
+Wywołany błąd jest spowodowany brakiem podania zmiennej/argumentu. Błąd wywołuje "std::logic_error" (ogólny błąd logiczny) oraz "basic_string::_M_construct" i "null not valid".
 std::logic_error-Zgłasza błędy,które są konsekwencją wadliwej logiki w programie, takie jak naruszenie logicznych waruków wstępnych lub niezmienników klas i można temu zapobiec.
-M_construct null not valid- nie udało mi się znaleźć jednoznacznego wyjaśnienia.
+basic_string::_M_construct- ...wykryty w funkcji basic_string::_M_construct...
+null not valid- ... była próba konstrukcji std::string na podstawie nullptr
