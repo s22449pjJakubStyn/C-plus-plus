@@ -3,29 +3,21 @@
 auto main(int, char* argv[]) -> int
 {
     auto const n = std::stoi(argv[1]);
-
-    for (int i = 1; i <= n; ++i) {
-        std::cout << i << ", ";
-    }
-    std::cout << "\n"
-              << "\n";
-    int i = 1;
+    auto i       = int{1};
+    auto test1   = std::string{};
+    std::cout << "\n";
 
     while (i <= n) {
-        std::string wynik = "";
-        std::string test1 = "";
-        std::string test2 = "";
+        std::string test_fizz = "";
+        std::string test_buzz = "";
 
         if (i % 3 == 0) {
-            test1 = "fizz";
+            test_fizz = "fizz";
         }
         if (i % 5 == 0) {
-            test2 = "buzz";
+            test_buzz = "buzz";
         }
-        if (i % 3 != 0 && i % 5 != 0) {
-            wynik = "niepodzielna przez 3 ani 5";
-        }
-        std::cout << i << ": " << test1 << test2 << wynik << std::endl;
+        std::cout << i << ": " << test_fizz << test_buzz << std::endl;
         ++i;
     }
 
