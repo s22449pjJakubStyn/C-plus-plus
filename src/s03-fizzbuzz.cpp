@@ -8,8 +8,8 @@ auto main(int, char* argv[]) -> int
     std::cout << "\n";
 
     while (i <= n) {
-        std::string test_fizz = "";
-        std::string test_buzz = "";
+        auto test_fizz = std::string{""};
+        auto test_buzz = std::string{""};
 
         if (i % 3 == 0) {
             test_fizz = "fizz";
