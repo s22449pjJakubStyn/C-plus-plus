@@ -13,8 +13,13 @@ auto ask_user_for_integer(std::string const prompt) -> int
 
 void swap(int* a, int* b)
 {
-    std::cout << *a << " " << *b << std::endl;
-    std::cout << *b << " " << *a << std::endl;
+    int first, second;
+
+    first  = *a;
+    second = *b;
+
+    *a = second;
+    *b = first;
 }
 
 auto main() -> int
@@ -25,8 +30,9 @@ auto main() -> int
         std::cout << "Wrong input numbers have to be diffrence!" << std::endl;
         return 1;
     }
-    int* wa = &a;
-    int* wb = &b;
-    swap(wa, wb);
+
+    std::cout << a << " " << b << std::endl;
+    swap(&a, &b);
+    std::cout << a << " " << b << std::endl;
     return 0;
 }
