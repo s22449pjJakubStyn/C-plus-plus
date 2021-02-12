@@ -121,6 +121,15 @@ auto evaluate_log(std::stack<double>& stack) -> void
     stack.push(log2(a));
 }
 
+auto evaluate_sine(std::stack<double>& stack) -> void
+{
+    if (stack.size() < 1) {
+        throw std::logic_error{"not enough operands for sin"};
+    }
+    auto const a = pop_top(stack);
+    stack.push(a*M_PI/180.0);
+}
+
 auto make_args(int argc, char* argv[]) -> std::vector<std::string>
 {
     auto args = std::vector<std::string>{};
@@ -155,6 +164,8 @@ auto main(int argc, char* argv[]) -> int
                 evaluate_square_root(stack);
             } else if (each == "log") {
                 evaluate_log(stack);
+            } else if (each == "sin") {
+                evaluate_addition(stack);
             } else {
                 stack.push(std::stod(each));
             }
